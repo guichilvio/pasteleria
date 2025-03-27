@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+
+
+
+<section class="atributos">
+    <img src="fondi.jpg" alt="Decoración de fondo" class="fondo-atributos">
+    
+    <div class="contenedor-atributos">
+      <h2 class="titulo-atributos">Attributes that distinguish us</h2>
+      <div class="grid-atributos">
+
+        <div class="tarjeta-atributo">
+          <div class="imagen-envuelta">
+            <img src="iconica.jpg" alt="Producto icónico">
+          </div>
+          <h3>ICONICS</h3>
+          <p>
+            We have been sweetening homes for generations, sharing stories with flavor and elegance for over 130 years.
+          </p>
+        </div>
+       
+        <div class="tarjeta-atributo">
+          <div class="imagen-envuelta">
+            <img src="cercana.jpg" alt="Relación cercana">
+          </div>
+          <h3>friendly </h3>
+          <p>
+            Our warm and personalized attention makes each guest feel at home, with a human and close treatment.
+          </p>
+        </div>
+
+        <div class="tarjeta-atributo">
+          <div class="imagen-envuelta">
+            <img src="humano.jpg" alt="Toque humano">
+          </div>
+          <h3>HUMAN</h3>
+          <p>
+            We put our heart into every detail. Our team works with passion, respect and genuine dedication.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .atributos {
+      position: relative;
+      padding: 120px 20px;
+      font-family: 'Georgia', serif;
+
+      overflow: hidden;
+    }
+  
+    .fondo-atributos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+    }
+  
+    .contenedor-atributos {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+  
+    .titulo-atributos {
+      font-size: 2.8rem;
+      color: #4b3d33;
+      margin-bottom: 80px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 500;
+      border-bottom: 2px solid #c9b18f;
+      display: inline-block;
+      padding-bottom: 10px;
+    }
+  
+    .grid-atributos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      justify-content: center;
+    }
+  
+    .tarjeta-atributo {
+      text-align: center;
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+  
+    .tarjeta-atributo:hover {
+      transform: translateY(-8px);
+    }
+  
+    .imagen-envuelta {
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+  
+    .imagen-envuelta img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+  
+    .imagen-envuelta:hover img {
+      transform: scale(1.03);
+    }
+  
+    .tarjeta-atributo h3 {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #3b2e25;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+  
+    .tarjeta-atributo p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #5a4d43;
+      max-width: 90%;
+      margin: 0 auto;
+    }
+  
+    @media (max-width: 768px) {
+      .titulo-atributos {
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+    }
+  </style>
+  
+    
+</body>
+</html>

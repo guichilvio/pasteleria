@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+</head>
+<body>
+    <section id="nosotros" class="seccion-nosotros">
+        <div class="contenedor-nosotros">
+          <div class="texto-nosotros">
+            <h2>Who we are</h2>
+            <p>
+              In <strong>Restorer's Corner</strong>,we believe that baking is an art form. Every cake, every cookie, every creation is born from the precise blend of technique, passion and respect for the ingredients.
+              <br><br>
+              Since our inception, we set out to go beyond taste: we seek to provoke emotions, memories and experiences in every bite. With a careful aesthetic, traditional recipes and a contemporary touch, we offer more than just sweets - we offer character.
+            </p>
+          </div>
+          <div class="imagen-nosotros">
+            <img src="somos.jpg" alt="Repostero trabajando">
+          </div>
+        </div>
+      </section>
+      
+      <style>
+        .seccion-nosotros {
+          padding: 100px 20px;
+          background: linear-gradient(to right, #f3e9e4, #f8f5f2);
+          color: #2d2d2d;
+        }
+      
+        .contenedor-nosotros {
+          max-width: 1100px;
+          margin: 0 auto;
+          display: flex;
+          align-items: center;
+          gap: 60px;
+          flex-wrap: wrap;
+        }
+      
+        .texto-nosotros {
+          flex: 1 1 500px;
+        }
+      
+        .texto-nosotros h2 {
+          font-size: 2.8rem;
+          margin-bottom: 20px;
+          font-weight: 600;
+          color: #3c2f2f;
+          border-left: 5px solid #361b02;
+          padding-left: 15px;
+        }
+      
+        .texto-nosotros p {
+          font-size: 1.2rem;
+          line-height: 1.8;
+          color: #4b4b4b;
+        }
+      
+        .imagen-nosotros {
+          flex: 1 1 400px;
+          text-align: center;
+        }
+      
+        .imagen-nosotros img {
+          width: 100%;
+          max-width: 450px;
+          border-radius: 15px;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+          object-fit: cover;
+        }
+      
+        @media (max-width: 900px) {
+          .contenedor-nosotros {
+            flex-direction: column-reverse;
+            text-align: center;
+          }
+      
+          .texto-nosotros h2 {
+            border-left: none;
+            padding-left: 0;
+            border-bottom: 3px solid #361b02;
+            display: inline-block;
+            margin: 0 auto 20px auto;
+          }
+        }
+      </style>
+    
+</body>
+</html>

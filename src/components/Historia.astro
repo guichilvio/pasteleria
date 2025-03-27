@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+</head>
+<body>
+    
+<section class="seccion-historia">
+    <div class="historia-contenido">
+   
+      <div class="historia-imagenes">
+        <img src="antigua.jpeg" alt="Historia imagen 1" class="img1">
+        <img src="antigua1.jpeg" alt="Historia imagen 2" class="img2">
+      </div>
+  
+    
+      <div class="historia-texto">
+        <h2>Our History</h2>
+        <p>
+          In <strong>Restorer's Corner</strong>,our story begins with a lit oven and a clear vision: to take the art of pastry making to another level. We were born from a passion for authentic flavors, delicate aesthetics and tradition passed down from generation to generation.
+          <br><br>
+          Since our inception, we have sought to merge the classic with the contemporary. Each recipe tells a chapter, each cake an emotion. More than products, we create experiences that accompany celebrations, family moments and unforgettable details.
+          <br><br>
+          Today we continue baking with the same love with which we started, knowing that behind every creation there is a story worth sharing.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    .seccion-historia {
+      background-color: #fffaf7;
+      padding: 100px 20px;
+      font-family: 'Georgia', serif;
+    }
+  
+    .historia-contenido {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 60px;
+      max-width: 1200px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+  
+    .historia-imagenes {
+      flex: 1 1 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .historia-imagenes img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      object-fit: cover;
+    }
+  
+    .historia-texto {
+      flex: 1 1 500px;
+    }
+  
+    .historia-texto h2 {
+      font-size: 2.8rem;
+      color: #3b2e25;
+      margin-bottom: 25px;
+      border-bottom: 2px solid #c9b18f;
+      display: inline-block;
+      padding-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+  
+    .historia-texto p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4c4038;
+    }
+  
+    @media (max-width: 900px) {
+      .historia-contenido {
+        flex-direction: column;
+      }
+  
+      .historia-imagenes {
+        flex-direction: row;
+        justify-content: center;
+        gap: 15px;
+      }
+  
+      .historia-imagenes img {
+        max-width: 45%;
+      }
+  
+      .historia-texto h2 {
+        font-size: 2rem;
+      }
+  
+      .historia-texto {
+        text-align: center;
+      }
+    }
+  </style>
+  
+</body>
+</html>

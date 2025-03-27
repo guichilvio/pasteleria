@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    .footer {
+      background-color: #3b2e25;
+      color: #f3efea;
+      padding: 60px 20px 30px 20px;
+      font-family: 'Georgia', serif;
+    }
+
+    .footer-contenido {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .footer-logo h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+      color: #f8e4c1;
+    }
+
+    .footer-logo p {
+      font-size: 1rem;
+      color: #ddd1c4;
+    }
+
+    .footer-redes p {
+      margin-bottom: 10px;
+      font-weight: bold;
+    }
+
+    .redes-iconos {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .redes-iconos a {
+      display: inline-block;
+    }
+
+    .icono-red {
+      width: 40px;
+      height: 40px;
+     
+      transition: transform 0.3s ease;
+    }
+
+    .icono-red:hover {
+      transform: scale(1.15);
+    }
+
+    .footer-bottom {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #bfb2a5;
+    }
+
+    @media (max-width: 768px) {
+      .footer-contenido {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="contacto"></div>
+  <footer class="footer">
+    <div class="footer-contenido">
+     
+      <div class="footer-logo">
+        <h3>Restorer's Corner</h3>
+        <p>Pastries with character and tradition</p>
+      </div>
+
+     
+      <div class="footer-redes">
+        <p>Follow us at</p>
+        <div class="redes-iconos">
+          <a href="#"><img src="tiktok.png" alt="TikTok" class="icono-red"></a>
+          <a href="#"><img src="facebook.png" alt="Facebook" class="icono-red"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram" class="icono-red"></a>
+        </div>
+      </div>
+    </div>
+
+   
+    <div class="footer-bottom">
+      <p>&copy; 2025 Restorer's Corner.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
