@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestras Especialidades</title>
+
+  <style>
+    body {
+      font-family: 'Georgia', serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fffaf7;
+    }
+
+    .especialidades {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .especialidades h2 {
+      font-size: 2.5rem;
+      color: #3b2e25;
+      margin-bottom: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .carrusel {
+      overflow: hidden;
+      max-width: 100%;
+      position: relative;
+    }
+
+    .carrusel-slider {
+      display: flex;
+      width: calc(300px * 10);
+      animation: mover 30s linear infinite;
+    }
+
+    .carrusel-item {
+      width: 300px;
+      flex-shrink: 0;
+      margin: 0 10px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .carrusel-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .carrusel-item h3 {
+      padding: 15px;
+      font-size: 1.1rem;
+      color: #5a4d43;
+    }
+
+    .carrusel-item:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes mover {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    @media (max-width: 768px) {
+      .carrusel-item {
+        width: 220px;
+      }
+
+      .carrusel-slider {
+        width: calc(220px * 10);
+        animation-duration: 20s;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="especialidades">
+    <h2>Nuestras especialidades</h2>
+
+    <div class="carrusel">
+      <div class="carrusel-slider" id="carrusel">
+        <div class="carrusel-item">
+          <img src="/pastelf.jpg" alt="Pastel de Fresa">
+          <h3>Pastel de Fresa Natural</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/tiramisu.jpeg" alt="Tiramisú">
+          <h3>Clásico Tiramisú</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/choco.jpg" alt="Chocolate Cake">
+          <h3>Pastel de Chocolate Belga</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/macarons.jpeg" alt="Macarons">
+          <h3>Macarons Franceses</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/cake.jpg" alt="Cheesecake">
+          <h3>Cheesecake de Frutos Rojos</h3>
+        </div>
+
+   
+        <div class="carrusel-item">
+          <img src="/pastelf.jpg" alt="Pastel de Fresa">
+          <h3>Pastel de Fresa Natural</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/tiramisu.jpeg" alt="Tiramisú">
+          <h3>Clásico Tiramisú</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/choco.jpg" alt="Chocolate Cake">
+          <h3>Pastel de Chocolate Belga</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/macarons.jpeg" alt="Macarons">
+          <h3>Macarons Franceses</h3>
+        </div>
+        <div class="carrusel-item">
+          <img src="/cake.jpg" alt="Cheesecake">
+          <h3>Cheesecake de Frutos Rojos</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
