@@ -1,11 +1,15 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>El Rincón del Repostero</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     * {
       margin: 0;
       padding: 0;
@@ -14,18 +18,21 @@
 
     body, html {
       height: 100%;
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Georgia', serif;
     }
 
-	body.no-scroll {
-  	overflow: hidden;
-	}
+    body.no-scroll {
+      overflow: hidden;
+    }
 
     header {
       position: relative;
       height: 100vh;
       width: 100%;
       overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     header img.fondo {
@@ -33,23 +40,36 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
+      z-index: -2;
+    }
+
+    header::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.1));
       z-index: -1;
     }
 
     nav {
+      position: fixed; /* <-- Fijo en la parte superior */
+      top: 0;
+      left: 0;
       width: 100%;
       padding: 20px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background-color: rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(6px);
-      position: relative;
-      z-index: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      z-index: 10;
     }
 
     nav .logo {
-      font-size: 1.5rem;
+      font-size: 1.6rem;
       font-weight: bold;
       color: white;
       text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
@@ -65,59 +85,61 @@
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1rem;
       transition: color 0.3s ease;
     }
 
     nav ul li a:hover {
-      color: #ffb6d9;
+      color: #f4c89c;
     }
 
     .contenido-header {
-      height: calc(100% - 80px);
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: flex-start;
-      color: white;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
       padding: 0 60px;
-      text-align: left;
+      color: white;
       animation: fadeInRight 1s ease forwards;
       opacity: 0;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      max-width: 700px;
+      margin-top: 100px;
     }
 
     .contenido-header h1 {
-      font-size: 3rem;
+      font-size: 3.2rem;
+      margin-bottom: 1rem;
       animation: slideUp 1s ease 0.3s forwards;
       opacity: 0;
     }
 
     .contenido-header p {
       font-size: 1.5rem;
-      margin-top: 1rem;
+      margin-bottom: 2rem;
       animation: slideUp 1s ease 0.6s forwards;
       opacity: 0;
     }
 
     .boton {
-      margin-top: 2rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #8a6005;
-      border-color: solid 2px black;
+      padding: 0.8rem 2rem;
+      background-color: #a87532;
+      border: none;
       color: white;
-      border-radius: 25px;
+      border-radius: 30px;
       cursor: pointer;
       font-size: 1rem;
-      transition: background-color 0.3s ease;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
       animation: slideUp 1s ease 0.9s forwards;
       opacity: 0;
     }
 
     .boton:hover {
-      background-color: #4f3605;
+      background-color: #8f612a;
+      transform: translateY(-2px);
     }
 
-    
     @keyframes fadeInRight {
       from {
         opacity: 0;
@@ -139,21 +161,41 @@
         transform: translateY(0);
       }
     }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .contenido-header {
+        padding: 0 30px;
+        margin-top: 80px;
+      }
+
+      .contenido-header h1 {
+        font-size: 2.2rem;
+      }
+
+      .contenido-header p {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body class="no-scroll">
-  <header>
-    <img class="fondo" src="fondo1.jpg" alt="Pastelería de fondo">
+  <header id="inicio">
+    <img class="fondo" src="fondo1.jpg" alt="Bakery background">
 
     <nav>
-      <div class="logo"> El Rincón del Repostero</div>
+      <div class="logo">El Rincón del Repostero</div>
       <ul>
-        <li><a href="#inicio">About Us</a></li>
+        <li><a href="#quienes">About Us</a></li>
         <li><a href="#recetas">Products</a></li>
         <li><a href="#nosotros">Our Story</a></li>
         <li><a href="#contacto">Contact</a></li>
       </ul>
-      
     </nav>
 
     <div class="contenido-header">
@@ -163,10 +205,11 @@
     </div>
   </header>
 
+
   <script type="text/javascript">
-    document.querySelector('.boton').addEventListener('click', function () {
+    document.querySelector('.boton').addEventListener('click', () => {
       document.body.classList.remove('no-scroll');
-       window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
+      window.scrollTo({ top: window.innerHeight, behavior: 'smooth' });
     });
   </script>
 </body>

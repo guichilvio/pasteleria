@@ -1,109 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our History</title>
+
+  <!-- Tipografías elegantes -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
- <div id="nosotros"></div>   
-<section class="seccion-historia">
+
+  <div id="nosotros"></div>
+  <section class="seccion-historia">
     <div class="historia-contenido">
-   
+      
       <div class="historia-imagenes">
-        <img src="antigua.jpeg" alt="Historia imagen 1" class="img1">
+        <img src="antigua.jpeg" alt="Old bakery photo">
       </div>
-  
-    
+
       <div class="historia-texto">
         <h2>Our History</h2>
         <p>
-          In <strong>El Rincón del Repostero</strong>,our story begins with a lit oven and a clear vision: to take the art of pastry making to another level. We were born from a passion for authentic flavors, delicate aesthetics and tradition passed down from generation to generation.
+          At <strong>El Rincón del Repostero</strong>, our story begins with a lit oven and a clear vision: to elevate the art of baking. We were born from a love of authentic flavors, delicate aesthetics, and time-honored tradition.
           <br><br>
-          Since our inception, we have sought to merge the classic with the contemporary. Each recipe tells a chapter, each cake an emotion. More than products, we create experiences that accompany celebrations, family moments and unforgettable details.
+          Since our inception, we've blended classic techniques with a modern twist. Each recipe is a chapter, each cake an emotion. More than products, we create experiences that shape celebrations, moments, and memories.
           <br><br>
-          Today we continue baking with the same love with which we started, knowing that behind every creation there is a story worth sharing.
+          Today, we continue baking with the same love that started it all — knowing every dessert holds a story worth telling.
         </p>
       </div>
     </div>
   </section>
-  
+
   <style>
-    .seccion-historia {
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
       background-color: #fffaf7;
-      padding: 100px 20px;
-      font-family: 'Georgia', serif;
+      color: #3b2e25;
     }
-  
+
+    .seccion-historia {
+      padding: 100px 20px;
+      background: linear-gradient(to bottom, #fffaf7 0%, #f3e9df 100%);
+      display: flex;
+      justify-content: center;
+    }
+
     .historia-contenido {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 60px;
+      background-color: #eaddcf;
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
       max-width: 1200px;
-      margin: 0 auto;
       flex-wrap: wrap;
+      animation: fadeInUp 1s ease;
     }
-  
+
     .historia-imagenes {
-      flex: 1 1 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
+      flex: 1 1 450px;
+      animation: fadeInLeft 1s ease;
     }
-  
+
     .historia-imagenes img {
       width: 100%;
       border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-      object-fit: cover;
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+      animation: float 4s ease-in-out infinite;
+      transition: transform 0.4s ease;
     }
-  
+
+    .historia-imagenes img:hover {
+      transform: scale(1.04);
+    }
+
     .historia-texto {
       flex: 1 1 500px;
     }
-  
+
     .historia-texto h2 {
+      font-family: 'Playfair Display', serif;
       font-size: 2.8rem;
       color: #3b2e25;
       margin-bottom: 25px;
-      border-bottom: 2px solid #c9b18f;
-      display: inline-block;
-      padding-bottom: 10px;
+      position: relative;
       text-transform: uppercase;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
     }
-  
+
+    .historia-texto h2::after {
+      content: "";
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 60px;
+      height: 4px;
+      background-color: #c79d5e;
+      border-radius: 2px;
+    }
+
     .historia-texto p {
       font-size: 1.1rem;
-      line-height: 1.8;
+      line-height: 1.9;
       color: #4c4038;
+      text-align: justify;
     }
-  
+
     @media (max-width: 900px) {
       .historia-contenido {
         flex-direction: column;
-      }
-  
-      .historia-imagenes {
-        flex-direction: row;
-        justify-content: center;
-        gap: 15px;
-      }
-  
-      .historia-imagenes img {
-        max-width: 45%;
-      }
-  
-      .historia-texto h2 {
-        font-size: 2rem;
-      }
-  
-      .historia-texto {
         text-align: center;
+        padding: 30px;
+      }
+
+      .historia-texto h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    /* Animaciones */
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
       }
     }
   </style>
-  
 </body>
 </html>

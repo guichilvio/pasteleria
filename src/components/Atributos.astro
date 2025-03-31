@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+
 </head>
 <body>
 
-<section class="atributos">
+  <section class="atributos">
     <img src="fo.jpg" alt="Decoración de fondo" class="fondo-atributos">
     
     <div class="contenedor-atributos">
@@ -16,19 +17,19 @@
 
         <div class="tarjeta-atributo">
           <div class="imagen-envuelta">
-            <img src="iconica.jpg" alt="Producto icónico">
+            <img src="iconica.jpg" alt="Iconic Product">
           </div>
           <h3>ICONICS</h3>
           <p>
             We have been sweetening homes for generations, sharing stories with flavor and elegance for over 130 years.
           </p>
         </div>
-       
+
         <div class="tarjeta-atributo">
           <div class="imagen-envuelta">
-            <img src="cercana.jpg" alt="Relación cercana">
+            <img src="cercana.jpg" alt="Friendly Service">
           </div>
-          <h3>friendly </h3>
+          <h3>FRIENDLY</h3>
           <p>
             Our warm and personalized attention makes each guest feel at home, with a human and close treatment.
           </p>
@@ -36,7 +37,7 @@
 
         <div class="tarjeta-atributo">
           <div class="imagen-envuelta">
-            <img src="humano.jpg" alt="Toque humano">
+            <img src="humano.jpg" alt="Human Touch">
           </div>
           <h3>HUMAN</h3>
           <p>
@@ -46,113 +47,138 @@
       </div>
     </div>
   </section>
-  
+
   <style>
-.atributos {
-  position: relative;
-  padding: 120px 20px;
-  font-family: 'Georgia', serif;
-  overflow: hidden;
-  background-color: rgba(255, 255, 255, 0.088); 
-}
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background-color: #fffaf7;
+      color: #3b2e25;
+    }
 
-.fondo-atributos {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.10;
-  z-index: 0;
-  pointer-events: none;
-  filter: blur(2px); /* Efecto elegante */
-}
+    .atributos {
+      position: relative;
+      padding: 120px 20px;
+      overflow: hidden;
+      background-color: #fdf8f3;
+    }
 
-.contenedor-atributos {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: center;
-  position: relative;
-  z-index: 1;
-  backdrop-filter: blur(1px); /* Suaviza el texto sobre fondo */
-}
+    .fondo-atributos {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.08;
+      z-index: 0;
+      pointer-events: none;
+      filter: blur(2px);
+    }
 
-.titulo-atributos {
-  font-size: 2.8rem;
-  color: #4b3d33;
-  margin-bottom: 80px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-weight: 500;
-  display: inline-block;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #d9c3a0;
-}
+    .contenedor-atributos {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      animation: fadeInUp 1s ease-out;
+    }
 
-.grid-atributos {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 60px;
-  justify-content: center;
-}
+    .titulo-atributos {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      color: #4b3d33;
+      margin-bottom: 80px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-weight: 600;
+      display: inline-block;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #c79d5e;
+      animation: fadeInTitle 1.5s ease-in-out;
+    }
 
-.tarjeta-atributo {
-  text-align: center;
-  padding: 20px;
-  transition: transform 0.3s ease;
-  background-color: rgba(255, 255, 255, 0.005);
-  border-radius: 15px;
-  backdrop-filter: blur(3px);
-  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-}
+    .grid-atributos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 60px;
+      justify-content: center;
+    }
 
-.tarjeta-atributo:hover {
-  transform: translateY(-8px);
-}
+    .tarjeta-atributo {
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 1s ease both;
+    }
 
-.imagen-envuelta {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-  margin-bottom: 25px;
-}
+    .tarjeta-atributo:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+    }
 
-.imagen-envuelta img {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform 0.4s ease;
-}
+    .imagen-envuelta {
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      animation: float 4s ease-in-out infinite;
+    }
 
-.imagen-envuelta:hover img {
-  transform: scale(1.03);
-}
+    .imagen-envuelta img {
+      width: 100%;
+      display: block;
+      transition: transform 0.4s ease;
+    }
 
-.tarjeta-atributo h3 {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #3b2e25;
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
+    .imagen-envuelta:hover img {
+      transform: scale(1.05);
+    }
 
-.tarjeta-atributo p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #5a4d43;
-  max-width: 90%;
-  margin: 0 auto;
-}
+    .tarjeta-atributo h3 {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #3b2e25;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
 
-@media (max-width: 768px) {
-  .titulo-atributos {
-    font-size: 2rem;
-    margin-bottom: 50px;
-  }
-}
+    .tarjeta-atributo p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #5a4d43;
+      max-width: 90%;
+      margin: 0 auto;
+    }
 
+    @media (max-width: 768px) {
+      .titulo-atributos {
+        font-size: 2rem;
+        margin-bottom: 50px;
+      }
+    }
+
+    /* Animations */
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInTitle {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
   </style>
-  
+
 </body>
 </html>

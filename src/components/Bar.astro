@@ -1,139 +1,174 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nuestras Especialidades</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Specialties</title>
 
-  <style>
-    body {
-      font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
-      background-color: #fffaf7;
-    }
 
-    .especialidades {
-      padding: 80px 20px;
-      text-align: center;
-    }
-
-    .especialidades h2 {
-      font-size: 2.5rem;
-      color: #3b2e25;
-      margin-bottom: 50px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .carrusel {
-      overflow: hidden;
-      max-width: 100%;
-      position: relative;
-    }
-
-    .carrusel-slider {
-      display: flex;
-      width: calc(300px * 10);
-      animation: mover 30s linear infinite;
-    }
-
-    .carrusel-item {
-      width: 300px;
-      flex-shrink: 0;
-      margin: 0 10px;
-      background-color: #fff;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
-      transition: transform 0.3s ease;
-    }
-
-    .carrusel-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-
-    .carrusel-item h3 {
-      padding: 15px;
-      font-size: 1.1rem;
-      color: #5a4d43;
-    }
-
-    .carrusel-item:hover {
-      transform: scale(1.05);
-    }
-
-    @keyframes mover {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
-
-    @media (max-width: 768px) {
-      .carrusel-item {
-        width: 220px;
-      }
-
-      .carrusel-slider {
-        width: calc(220px * 10);
-        animation-duration: 20s;
-      }
-    }
-  </style>
 </head>
 <body>
 
   <section class="especialidades">
-    <h2>Nuestras especialidades</h2>
+    <h2>Our Specialties</h2>
 
     <div class="carrusel">
       <div class="carrusel-slider" id="carrusel">
+        <!-- 5 principales -->
         <div class="carrusel-item">
-          <img src="/pastelf.jpg" alt="Pastel de Fresa">
-          <h3>Pastel de Fresa Natural</h3>
+          <img src="/pastelf.jpg" alt="Strawberry Cake">
+          <h3>Fresh Strawberry Cake</h3>
         </div>
         <div class="carrusel-item">
-          <img src="/tiramisu.jpeg" alt="Tiramisú">
-          <h3>Clásico Tiramisú</h3>
+          <img src="/tiramisu.jpeg" alt="Tiramisu">
+          <h3>Classic Tiramisu</h3>
         </div>
         <div class="carrusel-item">
           <img src="/choco.jpg" alt="Chocolate Cake">
-          <h3>Pastel de Chocolate Belga</h3>
+          <h3>Belgian Chocolate Cake</h3>
         </div>
         <div class="carrusel-item">
           <img src="/macarons.jpeg" alt="Macarons">
-          <h3>Macarons Franceses</h3>
+          <h3>French Macarons</h3>
         </div>
         <div class="carrusel-item">
           <img src="/cake.jpg" alt="Cheesecake">
-          <h3>Cheesecake de Frutos Rojos</h3>
+          <h3>Berry Cheesecake</h3>
         </div>
 
-   
+        <!-- Duplicados para efecto infinito -->
         <div class="carrusel-item">
-          <img src="/pastelf.jpg" alt="Pastel de Fresa">
-          <h3>Pastel de Fresa Natural</h3>
+          <img src="/pastelf.jpg" alt="Strawberry Cake">
+          <h3>Fresh Strawberry Cake</h3>
         </div>
         <div class="carrusel-item">
-          <img src="/tiramisu.jpeg" alt="Tiramisú">
-          <h3>Clásico Tiramisú</h3>
+          <img src="/tiramisu.jpeg" alt="Tiramisu">
+          <h3>Classic Tiramisu</h3>
         </div>
         <div class="carrusel-item">
           <img src="/choco.jpg" alt="Chocolate Cake">
-          <h3>Pastel de Chocolate Belga</h3>
+          <h3>Belgian Chocolate Cake</h3>
         </div>
         <div class="carrusel-item">
           <img src="/macarons.jpeg" alt="Macarons">
-          <h3>Macarons Franceses</h3>
+          <h3>French Macarons</h3>
         </div>
         <div class="carrusel-item">
           <img src="/cake.jpg" alt="Cheesecake">
-          <h3>Cheesecake de Frutos Rojos</h3>
+          <h3>Berry Cheesecake</h3>
         </div>
       </div>
     </div>
   </section>
 
+  <style>
+   @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap');
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fffaf7;
+  color: #3b2e25;
+}
+
+.especialidades {
+  padding: 100px 20px;
+  text-align: center;
+  background-image: linear-gradient(to bottom, #fffaf7 30%, #fbead1 100%);
+}
+
+/* Estilo del título como el de la imagen */
+.especialidades h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.6rem;
+  color: #3b2e25;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+  position: relative;
+  display: inline-block;
+}
+
+.especialidades h2::after {
+  content: '';
+  width: 60px;
+  height: 3px;
+  background-color: #c9a16b;
+  display: block;
+  margin: 14px auto 0;
+  border-radius: 2px;
+}
+
+.carrusel {
+  overflow: hidden;
+  max-width: 100%;
+  position: relative;
+  padding: 20px 0;
+}
+
+.carrusel-slider {
+  display: flex;
+  width: calc(320px * 10);
+  animation: scrollX 26s linear infinite;
+}
+
+.carrusel-item {
+  width: 300px;
+  flex-shrink: 0;
+  margin: 0 10px;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(6px);
+  border-radius: 18px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.carrusel-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+.carrusel-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.carrusel-item h3 {
+  padding: 16px;
+  font-size: 1.1rem;
+  color: #3b2e25;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-family: 'Playfair Display', serif;
+}
+
+@keyframes scrollX {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .carrusel-item {
+    width: 220px;
+  }
+
+  .carrusel-slider {
+    width: calc(220px * 10);
+    animation-duration: 20s;
+  }
+
+  .especialidades h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+}
+
+  </style>
 </body>
 </html>

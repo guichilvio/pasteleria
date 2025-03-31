@@ -8,107 +8,6 @@
   <!-- Boxicons CDN -->
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: 'Georgia', serif;
-      background-color: #fffaf7;
-      color: #3b2e25;
-    }
-
-    .seccion-servicios {
-      padding: 100px 20px;
-      text-align: center;
-      background-image: linear-gradient(rgba(205, 88, 21, 0.3), rgba(255, 250, 247, 0.9)),
-        url('/fon.jpg'); 
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-    }
-
-    .subtitulo {
-      color: #ffe9cd;
-      font-size: 1rem;
-      letter-spacing: 2px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
-
-    .titulo-principal {
-      font-size: 2.6rem;
-      color: #000000;
-      margin-bottom: 60px;
-    }
-
-    .grid-servicios {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 60px 50px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .servicio {
-      display: flex;
-      gap: 20px;
-      align-items: center;
-      text-align: left;
-    }
-
-    .servicio img {
-      width: 140px;
-      height: 140px;
-      border-radius: 12px;
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .texto-servicio {
-      flex: 1;
-    }
-
-    .texto-servicio .icono {
-      font-size: 1.5rem;
-      background-color: #c9a16b;
-      color: white;
-      padding: 10px;
-      border-radius: 50%;
-      display: inline-block;
-      margin-bottom: 10px;
-    }
-
-    .texto-servicio h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .texto-servicio p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #5a4d43;
-    }
-
-    @media (max-width: 768px) {
-      .grid-servicios {
-        grid-template-columns: 1fr;
-      }
-
-      .servicio {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .texto-servicio {
-        margin-top: 15px;
-      }
-    }
-  </style>
 </head>
 <body>
   <div id="recetas"></div>
@@ -154,6 +53,133 @@
       </div>
     </div>
   </section>
+
+  <style>
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #fffaf7;
+  color: #3b2e25;
+}
+
+.seccion-servicios {
+  padding: 100px 20px;
+  text-align: center;
+  background-image: linear-gradient(rgba(255, 250, 247, 0.796), rgba(255, 250, 247, 0.92)),
+    url('/fon.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.subtitulo {
+  font-size: 0.95rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #a87532;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.titulo-principal {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  color: #3b2e25;
+  margin-bottom: 60px;
+  position: relative;
+  display: inline-block;
+}
+
+.titulo-principal::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c9a16b;
+  margin: 16px auto 0;
+}
+
+.grid-servicios {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 40px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.servicio {
+  display: flex;
+  gap: 20px;
+  background-color: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  align-items: center;
+}
+
+.servicio:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.08);
+}
+
+.servicio img {
+  width: 120px;
+  height: 120px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.texto-servicio {
+  flex: 1;
+}
+
+.texto-servicio .icono {
+  font-size: 1.6rem;
+  background-color: #a87532;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+.texto-servicio h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  color: #2c1f14;
+  font-weight: bold;
+}
+
+.texto-servicio p {
+  font-size: 1rem;
+  color: #403730;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .grid-servicios {
+    grid-template-columns: 1fr;
+  }
+
+  .servicio {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servicio img {
+    margin-bottom: 15px;
+  }
+
+  .texto-servicio {
+    margin-top: 10px;
+  }
+}
+
+  </style>
 
 </body>
 </html>
